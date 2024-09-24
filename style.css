@@ -357,7 +357,8 @@ button {
 
 .cta-buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cta-button {
@@ -369,6 +370,13 @@ button {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 1em; /* Add space between buttons */
+    width: 80%; /* Make buttons wider */
+    max-width: 300px; /* Limit maximum width */
+}
+
+.cta-button:last-child {
+    margin-bottom: 0; /* Remove margin from the last button */
 }
 
 .cta-button:hover {
