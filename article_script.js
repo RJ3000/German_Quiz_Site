@@ -191,8 +191,8 @@ document.getElementById("return-to-start").addEventListener("click", () => {
     const cheatsheet = document.getElementById('cheatsheet');
     const showCheatsheetCheckbox = document.getElementById('show-cheatsheet');
 
-    // Hide the cheatsheet and uncheck the checkbox
-    cheatsheet.classList.remove('visible');
+    // Hide the cheatsheet completely
+    cheatsheet.style.display = 'none';
     showCheatsheetCheckbox.checked = false;
 
     scoreContainer.classList.add("hide");
@@ -228,8 +228,8 @@ function displayResult() {
     const cheatsheet = document.getElementById('cheatsheet');
     const showCheatsheetCheckbox = document.getElementById('show-cheatsheet');
 
-    // Hide the cheatsheet and uncheck the checkbox
-    cheatsheet.classList.remove('visible');
+    // Hide the cheatsheet completely
+    cheatsheet.style.display = 'none';
     showCheatsheetCheckbox.checked = false;
 
     // Hide the quiz container and show the score container
