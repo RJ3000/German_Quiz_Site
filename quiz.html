@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>German Verb Conjugation Quiz</title>
+</head>
+
+<body class="verb-quiz">
+    <div class="start-screen">
+        <h1>German Verb Conjugation Quiz</h1>
+        <div class="input-group">
+            <label for="question-input">Number of Questions:</label>
+            <input type="number" id="question-input" min="1" value="10">
+        </div>
+        <div class="input-group">
+            <label for="tense">Tense:</label>
+            <select id="tense">
+                <option value="present">Present (Präsens)</option>
+                <option value="perfect" disabled>Perfect (Perfekt) (Coming Soon)</option>
+                <option value="past" disabled>Simple Past (Präteritum) (Coming Soon)</option>
+                <option value="future" disabled>Future (Futur I) (Coming Soon)</option>
+                <option value="pluperfect" disabled>Past Perfect (Plusquamperfekt) (Coming Soon)</option>
+                <option value="conditional" disabled>Conditional (Konjunktiv II) (Coming Soon)</option>
+                <option value="imperative" disabled>Imperative (Imperativ) (Coming Soon)</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="most_common_20">20 Most Common Verbs</option>
+                <option value="most_common_50" disabled>50 Most Common Verbs (Coming Soon)</option>
+                <option value="regular_verbs" disabled>Regular Verbs Only (Coming Soon)</option>
+                <option value="irregular_verbs" disabled>Irregular Verbs Only (Coming Soon)</option>
+                <option value="modal_verbs" disabled>Modal Verbs (Coming Soon)</option>
+                <option value="separable_verbs" disabled>Separable Verbs (Coming Soon)</option>
+                <option value="reflexive_verbs" disabled>Reflexive Verbs (Coming Soon)</option>
+                <option value="a1_level" disabled>A1 Level Verbs (Coming Soon)</option>
+                <option value="a2_level" disabled>A2 Level Verbs (Coming Soon)</option>
+                <option value="b1_level" disabled>B1 Level Verbs (Coming Soon)</option>
+                <option value="all">All Verbs</option>
+            </select>
+        </div>
+        <button id="start-button">Start</button>
+    </div>
+    <div id="display-container">
+        <div class="header">
+            <div class="number-of-count">
+                <span class="number-of-question">1 of 3 questions</span>
+            </div>
+            <div class="timer-div">
+                <img src="stopwatch-icon.png"
+    
+                    width="20px" />
+                <span class="time-left">10s</span>
+            </div>
+            <div class="score-div">
+                <span class="current-score">Score: 0</span>
+            </div>
+        </div>
+        <div id="container">
+            <!-- questions and options will be displayed here -->
+        </div>
+        <div class="button-container">
+            <button id="next-button">Next</button>
+            <button id="quit-button">Quit Quiz</button>
+        </div>
+    </div>
+    <div class="score-container hide">
+        <h2>Quiz Completed!</h2>
+        <div id="user-score">Your score: <span id="score-value"></span></div>
+        <p>Would you like to try again with different options?</p>
+        <button id="return-to-start">Start New Quiz</button>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

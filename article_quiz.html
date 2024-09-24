@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>German Article Quiz</title>
+</head>
+
+<body class="article-quiz">
+
+
+    <div class="start-screen">
+        <h1>German Article Quiz</h1>
+        <div class="quiz-info">
+            <p>This quiz helps you learn tricks to identify the correct German article (der, die, das) based on noun endings.</p>
+            <p>For example:</p>
+            <ul>
+                <li>Nouns ending in -ung, -heit, -keit, -schaft are usually <strong>die</strong> (feminine)</li>
+                <li>Nouns ending in -ich, -ling, -ismus are usually <strong>der</strong> (masculine)</li>
+                <li>Nouns ending in -chen, -lein, -um are usually <strong>das</strong> (neuter)</li>
+            </ul>
+            <p>Practice these patterns to quickly determine the correct article for many German nouns!</p>
+        </div>
+        <div class="input-group">
+            <label for="question-input">Number of Questions:</label>
+            <input type="number" id="question-input" min="1" value="10">
+        </div>
+        <button id="start-button">Start Quiz</button>
+    </div>
+    <div class="quiz-container">
+        <div id="cheatsheet" class="cheatsheet">
+            <h3>Article Cheatsheet</h3>
+            <h4>Die (Feminine)</h4>
+            <ul>
+                <li>-ung, -heit, -keit, -schaft</li>
+                <li>-tät, -ion, -ie, -ik</li>
+                <li>-ur, -ei, -in (female forms)</li>
+            </ul>
+            <h4>Der (Masculine)</h4>
+            <ul>
+                <li>-er, -ling, -ich, -ismus</li>
+                <li>-ant, -ent, -ast, -ost</li>
+                <li>-us, -or</li>
+            </ul>
+            <h4>Das (Neuter)</h4>
+            <ul>
+                <li>-chen, -lein (diminutives)</li>
+                <li>-um, -ment</li>
+                <li>-o, -ett</li>
+            </ul>
+        </div>
+        <div id="display-container">
+            <div class="header">
+                <div class="number-of-count">
+                    <span class="number-of-question">1 of 10 questions</span>
+                </div>
+                <div class="timer-div">
+                    <img src="stopwatch-icon.png" width="20px" />
+                    <span class="time-left">10s</span>
+                </div>
+                <div class="score-div">
+                    <span class="current-score">Score: 0</span>
+                </div>
+            </div>
+            <div id="container">
+                <!-- questions and options will be displayed here -->
+            </div>
+            <div class="cheatsheet-toggle">
+                <input type="checkbox" id="show-cheatsheet">
+                <label for="show-cheatsheet">Show Cheatsheet</label>
+            </div>
+            <div class="button-container">
+                <button id="next-button">Next</button>
+                <button id="quit-button">Quit Quiz</button>
+            </div>
+        </div>
+    </div>
+    <div class="score-container hide">
+        <h2>Quiz Completed!</h2>
+        <div id="user-score">Your score: <span id="score-value"></span></div>
+        <p>Would you like to try again with different options?</p>
+        <button id="return-to-start">Start New Quiz</button>
+    </div>
+    <div id="cheatsheet" class="cheatsheet minimized">
+        <div class="cheatsheet-header">
+            <h3>Article Cheatsheet</h3>
+            <button id="toggle-cheatsheet">-</button>
+        </div>
+        <div class="cheatsheet-content">
+            <h4>Die (Feminine)</h4>
+            <ul>
+                <li>-ung, -heit, -keit, -schaft</li>
+                <li>-tät, -ion, -ie, -ik</li>
+                <li>-ur, -ei, -in (female forms)</li>
+            </ul>
+            <h4>Der (Masculine)</h4>
+            <ul>
+                <li>-er, -ling, -ich, -ismus</li>
+                <li>-ant, -ent, -ast, -ost</li>
+                <li>-us, -or</li>
+            </ul>
+            <h4>Das (Neuter)</h4>
+            <ul>
+                <li>-chen, -lein (diminutives)</li>
+                <li>-um, -ment</li>
+                <li>-o, -ett</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="article_questions.js"></script>
+    <script src="article_script.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
